@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My 2000s Style Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #87ceeb url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+            color: #000080;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border: 2px solid #000080;
+            box-shadow: 0 0 10px #888;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6600;
+            text-shadow: 1px 1px 0 #fff;
+            border-bottom: 2px dotted #000080;
+            margin-bottom: 20px;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #000080;
+            text-decoration: underline;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+        .marquee {
+            background: #e0e0e0;
+            color: #ff0000;
+            padding: 5px 0;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%);}
+            100% { transform: translateX(-100%);}
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to My Cool 2000s Website!</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Guestbook</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="marquee">Welcome to my awesome website! Enjoy your stay!</div>
+        <p>
+            This is a simple website inspired by the early 2000s, but built with modern HTML and CSS. 
+            Check out the navigation links above and don't forget to sign the guestbook!
+        </p>
+        <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Dancing Banana" style="display:block; margin:20px auto;">
+        <footer>
+            &copy; 2024 My Cool Site | <a href="#">Back to top</a>
+        </footer>
+    </div>
+</body>
+</html>
