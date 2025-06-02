@@ -1,36 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>cool drgoblin</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: black;
-      padding: 20px;
-    }
-    h1 {
-      color: #00ffcc;
-    }
-    p {
-      color: #cccccc;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #008cba;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #005f5f;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>cool.drgoblin.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #00782a url('assets/dark-leather.png');
+            color: #000080;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border: 2px solid #000080;
+            box-shadow: 0 0 10px #888;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #00782a;
+            text-shadow: 1px 1px 0 #353535;
+            margin-bottom: 20px;
+        }
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #000080;
+            text-decoration: underline;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            color: #ff0000; /* visible red */
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(350%); }
+            100% { transform: translateX(-50%); }
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <h1>cool.drgoblin.com</h1>
-  <p><img src="4.gif" alt="Under Construction"></p>
-  <button onclick="alert('Cool!')">Click for coolness</button>
+    <div id="container">
+        <h1>Welcome to cool.drgoblin.com</h1>
+        <nav>
+            <img src="assets/Goblin.gif" alt="" style="vertical-align:middle; width:auto; height: 100px;">
+            <a href="Drgoblin.com">Drgoblin.com</a>
+            <a href="#">About</a>
+            <a href="#">Guestbook</a>
+            <a href="#">Contact</a>
+            <img src="assets/Goblin.gif" alt="" style="vertical-align:middle; width:auto; height: 100px;">
+        </nav>
+        
+        <div class="marquee">
+            <img src="http://www.netanimations.net/manWalking.gif" width="200" height="50">
+        </div>
+        
+        <p>
+            This is a simple website inspired by the early 2000s, but built with modern HTML and CSS. 
+            Check out the navigation links above and don't forget to sign the guestbook!
+        </p>
+        <img src="4.gif" alt="Under Construction" style="display:block; margin:20px auto;">
+        <footer>
+            &copy; 2002-2025 Drgoblin.com All rights reserved.| <a href="#">Back to top</a>
+        </footer>
+    </div>
 </body>
 </html>
