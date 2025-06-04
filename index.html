@@ -5,6 +5,13 @@
 <title>cool.drgoblin.com</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<script>
+function showSection(id) {
+  const sections = document.querySelectorAll('.page-section');
+  sections.forEach(sec => sec.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+</script>
 <style>
 @keyframes glow-border {
     0%, 100% { box-shadow: 0 0 10px #17a842; }
@@ -14,48 +21,64 @@
 
 </head>
 <body style="background: #00782a url('assets/dark-leather.png'); color: #0b411b; font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
-    <div id="container" style="
-        width: 800px;
-        max-width: 95vw;
-        margin: 40px auto;
-        background: #00782a;
-        border: 2px solid #0b411b;
-        box-shadow: 0 0 10px #888;
-        padding: 20px;
-        box-sizing: border-box;
-        animation: glow-border 10s infinite ease-in-out;
-        ">
+    
+    <div id="container" style=" width: 800px; max-width: 95vw; margin: 40px auto; background: #00782a; border: 2px solid #0b411b; box-shadow: 0 0 10px #888; padding: 20px; box-sizing: border-box; animation: glow-border 10s infinite ease-in-out;">
         
         <h1 style="position: absolute; left: -9999px;">cool.drgoblin.com</h1>
         <a href="https://cool.drgoblin.com"> <img src="assets/text.gif" alt="cool.drgoblin.com" style="display: block; margin: 0 auto; width: 100%; max-width: 100%; height: auto;" /></a>
 
         <nav style="margin-bottom: 20px; text-align: center; font-size: 1em;">
             <img src="assets/Goblin.gif" alt="Goblin.gif" style="vertical-align: middle; height: 100px; width: auto; transform: scale(1.8) scaleX(-1) translateY(10px); transform-origin: center;" />
-            <a href="https://cool.drgoblin.com/" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Home</a>
-            <a href="scans.html" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Scans</a>
-            <a href="guestbook.html" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Guestbook</a>
-            <a href="contact.html" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Contact</a>
+            
+            <a href="#" onclick="showSection('home')" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Home</a>
+            <a href="#" onclick="showSection('scans')" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Scans</a>
+            <a href="#" onclick="showSection('guestbook')" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Guestbook</a>
+            <a href="#" onclick="showSection('contact')" style="color: #000000; text-decoration: underline; margin: 0 15px; font-weight: bold;">Contact</a>
+
             <img src="assets/Goblin.gif" alt="Goblin.gif" style="vertical-align: middle; height: 100px; width: auto; transform: scale(1.8) scaleX(1) translateY(10px); transform-origin: center;" />
         </nav>
-
         <a href="https://drgoblin.com/" style="display: block; width: fit-content; margin: 0 auto; transform: translateY(-30px); color: #87c797; text-decoration: underline dashed; font-weight: bold; text-shadow: 0 0 6px #075307, 0 0 12px #0a380a; font-size: 20px; font-family: Georgia, serif;">Drgoblin.com</a>
 
-        <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
-        Drgoblin.com has been around since 2015 because the scammers over at godaddy promised me this domain would only cost me $1/year, the dogs actually charge you $30 next year. They seemingly follow a drug dealer strategy but instead of addiction, you’re worried that some random bot is going to snatch your domain up forever the moment it lapses (probably Godaddy themselves). 
-        <br /><br /> Originally the site just had a repeating Drgoblin picture, but it was wow highmaul time, (The most forgettable raid in wow). So I made it look similar to <a href="https://web.archive.org/web/20160301173232/http://tectus.rocks:80/" target="_blank" rel="noopener noreferrer">tectus.rocks</a> , which closed down long ago, drgoblin.com being it’s lasting legacy, I guess. Drgoblin.com originally used code to make a website snow effect. <b>Goblin snow</b>. 
-        <br /><br /> I’ve never wanted to actually pay any money for drgoblin.com, <b>at all</b>. So after it ended up being too annoying to run this site on a Raspberry Pi. Drgoblin.com was switched to a free host which was supposably set up in honour of some guy’s late brother. He just wanted to do good, and web hosting was how it did it until it sold it off to a big corporation who then monetised it. Then it was moved to cursed FreeHosting.com where it remained until I finally found something better, github pages. 
-        <br /><br /> Though drgoblin.com has long since left Godaddy for Namesilo. the price I pay per year has steadily gone up, almost back to the original $30 scam. So in fear of the bots, Drgoblin.com continues to be a yearly tax on my life. Rise goblin.
+        <div id="home" class="page-section">
+            <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
+                Drgoblin.com has been around since 2015 because the scammers over at godaddy promised me this domain would only cost me $1/year, the dogs actually charge you $30 next year. They seemingly follow a drug dealer strategy but instead of addiction, you’re worried that some random bot is going to snatch your domain up forever the moment it lapses (probably Godaddy themselves). 
+                <br /><br /> Originally the site just had a repeating Drgoblin picture, but it was wow highmaul time, (The most forgettable raid in wow). So I made it look similar to <a href="https://web.archive.org/web/20160301173232/http://tectus.rocks:80/" target="_blank" rel="noopener noreferrer">tectus.rocks</a> , which closed down long ago, drgoblin.com being it’s lasting legacy, I guess. Drgoblin.com originally used code to make a website snow effect. <b>Goblin snow</b>. 
+                <br /><br /> I’ve never wanted to actually pay any money for drgoblin.com, <b>at all</b>. So after it ended up being too annoying to run this site on a Raspberry Pi. Drgoblin.com was switched to a free host which was supposably set up in honour of some guy’s late brother. He just wanted to do good, and web hosting was how it did it until it sold it off to a big corporation who then monetised it. Then it was moved to cursed FreeHosting.com where it remained until I finally found something better, github pages. 
+                <br /><br /> Though drgoblin.com has long since left Godaddy for Namesilo. the price I pay per year has steadily gone up, almost back to the original $30 scam. So in fear of the bots, Drgoblin.com continues to be a yearly tax on my life. Rise goblin.
+            </p>
+        </div>
+
+        <div id="scans" class="page-section" style="display: none;">About the site
+            Please look at my scans when I make it.
+
+            <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
+        </div>
+
+        <div id="guestbook" class="page-section" style="display: none;">Sign my guestbook
+            <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
+                Please sign the guestbook when I make it.
+
+            <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
         </p>
+        </div>
+
+        <div id="contact" class="page-section" style="display: none;">Sign my guestbook
+            <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
+                Please look at my contacts when I make it.
+
+            <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
+        </p>
+        </div>
 
         <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 100%;">
             <img src="assets/javier-goblin-pixel-art3.gif" alt="Walking Goblin gif" style="transform: scaleX(-1); width: 100px; height: 50px;" />
         </marquee>
     </div>
 
-    <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
-    
     <footer style="margin-top: 80px; font-size: 0.9em; color: #ffffff; text-align: center; padding: 10px 0; background: #00782a00;">
         &copy; 2015-2025 Drgoblin.com | <a href="#" style="color: inherit; text-decoration: none;">Back to top</a>
     </footer>
+
+
 </body>
 </html>
