@@ -23,11 +23,7 @@ function showSection(id) {
 
 <!-- Guestbook Chat settings-->
 <script src="https://iframe.chat/scripts/main.min.js"></script>
-<script>
-  chattable.initialize({
-    theme : "Kick"
-  });
-</script>
+<script>chattable.initialize({theme : "Kick"});</script>
 
 </head>
 <body style="background: #00782a url('assets/dark-leather.png'); color: #0b411b; font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
@@ -49,6 +45,7 @@ function showSection(id) {
         </nav>
         <a href="https://drgoblin.com/" style="display: block; width: fit-content; margin: 0 auto; transform: translateY(-30px); color: #87c797; text-decoration: underline dashed; font-weight: bold; text-shadow: 0 0 6px #075307, 0 0 12px #0a380a; font-size: 20px; font-family: Georgia, serif;">Drgoblin.com</a>
 
+        <!------------------------------------ Home ------------------------------------>
         <div id="home" class="page-section">
             <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
                 Drgoblin.com has been around since 2015 because the scammers over at godaddy promised me this domain would only cost me $1/year, the dogs actually charge you $30 next year. They seemingly follow a drug dealer strategy but instead of addiction, you’re worried that some random bot is going to snatch your domain up forever the moment it lapses (probably Godaddy themselves). 
@@ -58,34 +55,32 @@ function showSection(id) {
             </p>
         </div>
 
+        <!------------------------------------ Scans ------------------------------------>
         <div id="scans" class="page-section" style="display: none;">
             <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
-            Please look at my scans when I make it.
+                Please look at my scans when I make it.
 
-            <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
+                <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
             </p>
         </div>
 
+        <!------------------------------------ Guestbook ------------------------------------>
         <div id="guestbook" class="page-section" style="display: none;">
             <div style="text-align: center; font-size: 1.2em; color: #000000; font-family: 'Times New Roman', Times, serif;">
-                <iframe 
-                    src="https://iframe.chat/embed?chat=62715459" id="chattable" frameborder="0" width="700" height="400" style="display: block; margin: 0 auto;">
-                </iframe>
-
-                <p style="text-align: justify; display: inline-block; max-width: 600px;">
-                    Please sign the guestbook when I make it. 
-                </p>
+                <iframe src="https://iframe.chat/embed?chat=62715459" id="chattable" frameborder="0" width="700" height="400" style="display: block; margin: 0 auto;"></iframe>
+                <p style="text-align: justify; display: inline-block; max-width: 600px;">Please sign the guestbook. Hopefully it's still working. </p>
             </div>
         </div>
 
+        <!------------------------------------ Contact ------------------------------------>
         <div id="contact" class="page-section" style="display: none;">
             <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
-                Please look at my contacts when I make it.
-
+                idk how reachable I want to be yet.
             <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
             </p>
         </div>
 
+        <!------------------------------------ FOOTER ------------------------------------>
         <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 100%;">
             <img src="assets/javier-goblin-pixel-art3.gif" alt="Walking Goblin gif" style="transform: scaleX(-1); width: 100px; height: 50px;" />
         </marquee>
@@ -94,7 +89,6 @@ function showSection(id) {
     <footer style="margin-top: 80px; font-size: 0.9em; color: #ffffff; text-align: center; padding: 10px 0; background: #00782a00;">
         &copy; 2015-2025 Drgoblin.com | <a href="#" style="color: inherit; text-decoration: none;">Back to top</a>
     </footer>
-
 
 </body>
 </html>
