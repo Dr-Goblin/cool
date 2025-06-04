@@ -20,6 +20,15 @@ function showSection(id) {
 }
 </style>
 
+
+<!-- Guestbook Chat settings-->
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script>
+  chattable.initialize({
+    theme : "Kick"
+  });
+</script>
+
 </head>
 <body style="background: #00782a url('assets/dark-leather.png'); color: #0b411b; font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
     
@@ -58,11 +67,15 @@ function showSection(id) {
         </div>
 
         <div id="guestbook" class="page-section" style="display: none;">
-            <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
-                Please sign the guestbook when I make it.
+            <div style="text-align: center; font-size: 1.2em; color: #000000; font-family: 'Times New Roman', Times, serif;">
+                <iframe 
+                    src="https://iframe.chat/embed?chat=62715459" id="chattable" frameborder="0" width="700" height="400" style="display: block; margin: 0 auto;">
+                </iframe>
 
-            <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
-            </p>
+                <p style="text-align: justify; display: inline-block; max-width: 600px;">
+                    Please sign the guestbook when I make it. 
+                </p>
+            </div>
         </div>
 
         <div id="contact" class="page-section" style="display: none;">
