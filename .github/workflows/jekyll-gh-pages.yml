@@ -1,16 +1,13 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
-  contents: write      # changed from read to allow commits
+  contents: write
   pages: write
   id-token: write
 
@@ -25,26 +22,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # needed to access git history for timestamps
+          fetch-depth: 0  # required to access full git history for file timestamps
 
-      - name: Generate images.json
+      - name: Generate images.json from scans/
         run: |
-          mkdir -p data
-          find images -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | while read -r file; do
+          rm -f images.json
+          find scans -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | while read -r file; do
             timestamp=$(git log -1 --format="%cI" -- "$file" || date -Iseconds)
-            echo "{\"src\": \"$file\", \"created\": \"$timestamp\"}," >> data/tmp.json
+            echo "{\"src\": \"$file\", \"created\": \"$timestamp\"}," >> tmp_images.json
           done
-          echo "[" > data/images.json
-          sed '$ s/,$//' data/tmp.json >> data/images.json
-          echo "]" >> data/images.json
-          rm data/tmp.json
+          echo "[" > images.json
+          sed '$ s/,$//' tmp_images.json >> images.json
+          echo "]" >> images.json
+          rm tmp_images.json
 
       - name: Commit and push images.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/images.json
-          git commit -m "Auto-update images.json" || echo "No changes to commit"
+          git add images.json
+          git commit -m "Auto-update images.json from scans/" || echo "No changes to commit"
           git push
 
       - name: Setup Pages
