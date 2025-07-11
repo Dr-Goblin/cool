@@ -20,6 +20,18 @@ function showSection(id) {
 }
 </style>
 
+<style>
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .grid img {
+    width: calc(50% - 5px);
+    height: auto;
+  }
+</style>
+
 <!-- Guestbook Chat settings-->
 <script src="https://iframe.chat/scripts/main.min.js"></script>
 <script>chattable.initialize({theme : "Kick"});</script>
@@ -57,26 +69,27 @@ function showSection(id) {
 
         <!------------------------------------ Scans ------------------------------------>
         <div id="scans" class="page-section" style="display: none;">
-            <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
-                Please look at my scans when I make it.
-                
-                <script>
-                    fetch("images.json")
-                    .then(res => res.json())
-                    .then(images => {
-                        images.sort((a, b) => new Date(b.created) - new Date(a.created));
-                        const grid = document.getElementById("image-grid");
-                        images.forEach(({src}) => {
-                        const img = document.createElement("img");
-                        img.src = src;
-                        grid.appendChild(img);
-                        });
-                    });
-                </script>
+        <p style="font-size: 1.2em; text-align: justify; color: #000000; font-family: 'Times New Roman', Times, serif;">
+            Please look at my scans when I make it.
+        </p>
 
+        <div class="grid" id="image-grid"></div>
 
-                <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
-            </p>
+        <script>
+            fetch("images.json")
+            .then(res => res.json())
+            .then(images => {
+                images.sort((a, b) => new Date(b.created) - new Date(a.created));
+                const grid = document.getElementById("image-grid");
+                images.forEach(({ src }) => {
+                const img = document.createElement("img");
+                img.src = src;
+                grid.appendChild(img);
+                });
+            });
+        </script>
+
+        <img src="assets/4.gif" alt="Under Construction" style="display: block; margin: 20px auto; max-width: 100%; height: auto;" />
         </div>
 
         <!------------------------------------ Chat ------------------------------------>
