@@ -20,7 +20,6 @@ function showSection(id) {
 }
 </style>
 
-
 <!-- Scans layout settings  -->
 <style>
   .grid {
@@ -38,9 +37,27 @@ function showSection(id) {
 <script src="https://iframe.chat/scripts/main.min.js"></script>
 <script>chattable.initialize({theme : "Kick"});</script>
 
+
+<!-- Word Snake settings-->
+<style>
+.snake span {
+  position: absolute;
+  white-space: pre;
+  offset-path: path("m-81 884c-216-1219 37-855 218-910 193-78 301-42 412-15 268 114 399-278 216 895");
+  offset-anchor: 50% 50%;
+  offset-rotate: auto;
+  animation: slither 20s linear infinite;
+}
+
+@keyframes slither {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+</style>
+
 </head>
 <body style="background: #00782a url('assets/dark-leather.png'); color: #0b411b; font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
-    
+
     <!--0000000000000000000000000000000000 BODY 0000000000000000000000000000000000-->
     <div id="container" style=" width: 800px; max-width: 95vw; margin: 40px auto; background: #00782a; border: 2px solid #0b411b; box-shadow: 0 0 10px #888; padding: 20px; box-sizing: border-box; animation: glow-border 10s infinite ease-in-out;">
         
@@ -58,6 +75,19 @@ function showSection(id) {
             <img src="assets/Goblin.gif" alt="Goblin.gif" style="vertical-align: middle; height: 100px; width: auto; transform: scale(1.8) scaleX(1) translateY(10px); transform-origin: center;" />
         </nav>
         <a href="https://drgoblin.com/" style="display: block; width: fit-content; margin: 0 auto; transform: translateY(-30px); color: #87c797; text-decoration: underline dashed; font-weight: bold; text-shadow: 0 0 6px #075307, 0 0 12px #0a380a; font-size: 20px; font-family: Georgia, serif;">Drgoblin.com</a>
+
+        <div class="snake"> 
+            <span style="animation-delay:0s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">N</span> 
+            <span style="animation-delay:0.2s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">I</span> 
+            <span style="animation-delay:0.4s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;"> L</span> 
+            <span style="animation-delay:0.6s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">B</span> 
+            <span style="animation-delay:0.8s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">O</span> 
+            <span style="animation-delay:1s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">G</span> 
+            <span style="animation-delay:1.2s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">R</span> 
+            <span style="animation-delay:1.4s; font-family:Impact, sans-serif; font-size:25px; font-weight:bold; color:#26c588; text-shadow:2px 2px 6px rgba(0,0,0,0.8), 0 0 8px #051f18;">D</span> 
+        </div>
+
+
 
         <!------------------------------------ Home ------------------------------------>
         <div id="home" class="page-section">
